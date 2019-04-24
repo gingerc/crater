@@ -1,0 +1,19 @@
+{
+  "name": "socketpractice",
+  "version": "1.0.0",
+  "description": "sockets example coding train",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "socket"
+  ],
+  "author": "jingjie chen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}

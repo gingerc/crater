@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.dom.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    
+    <div id="startScreen">
+        <h1 id=title>Create Your Asteroid</h1>
+
+        <button class="next" id="start" onclick="goToShape()">Start</button>
+    </div>
+    
+    
+    <div class="shapeContainer">
+        <p class="instruction">Choose a Shape</p>
+        <button  class="button" class="shape" id="shape1" onfocus="shape1selected()" ontouchstart="shape1selected()">Circular</button>
+        <button  class="button" class="shape" id="shape2" onfocus="shape2selected()" ontouchstart="shape2selected()">Irregular</button>
+        <button  class="button" class="shape" id="shape3" onfocus="shape3selected()" ontouchstart="shape3selected()">Long</button>
+      
+        <button class="next" id="shapeNext" onclick="goToSize()">Next</button>
+    </div>
+    
+    <div class="sizeContainer">
+        <p class="instruction">Choose a Size</p>
+        <button  class="button" class="size" id="size1" onfocus="size1selected()" ontouchstart="size1selected()">Small</button>
+        <button  class="button" class="size" id="size2" onfocus="size2selected()" ontouchstart="size2selected()">Medium</button>
+        <button  class="button" class="size" id="size3" onfocus="size3selected()" ontouchstart="size3selected()">Large</button>
+        
+        <button class="next" id="sizeNext" onclick="goToName()">Next</button>
+    </div>
+    
+    <div class="nameContainer">
+        <p class="instruction">Name your Asteroid</p>
+        <input id=asteroidName type="text">
+
+        <button class="next" id="nameNext" onclick="goToStation()">Next</button>
+    </div>
+    
+
+    <div class="launchStationContainer">
+        <p class="instruction">Choose your Launch Station</p>
+        <div id ="stations">
+    
+          <button  class="button" id="bt1" onfocus="station1selected()" ontouchstart="station1selected()">Station 1</button>
+          <button  class="button" id="bt2" onfocus="station2selected()" ontouchstart="station2selected()">Station 2</button>
+          <button  class="button" id="bt3" onfocus="station3selected()" ontouchstart="station3selected()">Station 3</button>
+          <button  class="button" id="bt4" onfocus="station4selected()" ontouchstart="station4selected()">Station 4</button>
+          <button  class="button" id="bt5" onfocus="station5selected()" ontouchstart="station5selected()">Station 5</button>
+    
+          <button class="next" id="shoot" onclick="goToShoot()">Ready to shoot!</button>
+    </div>
+
+    
+    </div>
+
+    <div class="launchPage" id="swipeZone">
+        <p id="launchMessage" class="instruction" >Swipe Up to send your asteroid <br><span id="insertName">n</span> <br> to the Moon!</p>
+        <div id="triangle" >
+          <p id="stationNum">2</p>
+        </div>
+         <!-- <button id=btn onclick="OnBtnClicked()"></button> -->
+    </div>
+
+    <div id="loading">
+        <p id="loadingMessage">Your asteroid is flying to the moon...</p>
+        <img id="loadingGIF" src="images/loading2.gif">
+    
+    </div>
+
+    <div id="infoPage">
+        <h1>Your asteroid created a Crater!</h1>
+        <p>your crater is very similat to this crater on the actual Moon:</p>
+        <p id="craterName">Aristoteles (87km)</p>
+        <img id="craterImage" src="images/Aristoteles.jpg">
+        <p id="CraterInfo">The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.  
+</p>
+
+        <button id="learnMore">Learn More</button>
+    </div>
+   
+    <script src="sketch.js"></script>
+  </body>
+</html>

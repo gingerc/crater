@@ -1,0 +1,284 @@
+html{
+  overflow: hidden;
+  height: 100%;
+}
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  height: 100%; 
+  overflow: auto;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+#triangle {
+    width: 160px;
+    height: 130px;
+    border-bottom: solid 130px red;
+    border-left: solid 130px transparent;
+    border-right: solid 130px transparent;
+
+    display: inline-block;
+    vertical-align: bottom;
+    align-content: center;
+    align-items: center;
+    
+    position: fixed;
+    left: 50%;
+    bottom:0%;
+    transform: translate(-50%, 0%);
+    margin: 0 auto;
+}
+
+
+#bt1  {background-color: #4ECDC4;} /*78,205,196*/
+#bt2  {background-color: #F7FFF7; color:grey } /*247,255,247*/
+#bt3  {background-color: #FF6B6B;} /*255, 107, 107*/
+#bt4  {background-color: #FFE66D;} /*255,230,109*/
+#bt5  {background-color: #5BC0EB;} /*198,61,92*/
+
+
+.launchPage,.launchStationContainer,.nameContainer,.sizeContainer,.shapeContainer{
+  display:none;
+}
+
+#swipeZone {
+  left:0;
+  top:0;
+  position: absolute;
+  height:100%;
+  width: 100%;
+}
+
+.next{
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000;
+  background-color: #FFE66D;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px #ffc74f;
+  margin-left:30%;
+  margin-top: 40%;
+}
+
+#title{
+  left:45%;
+  top:15%;
+  padding-top: 3em;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+  box-align: center;
+}
+
+.next:hover {background-color: #f9d834}
+
+.next:active {
+  background-color: #fccb0a;
+  box-shadow: 0 5px #c9a106;
+  transform: translateY(4px);
+}
+
+.button{
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000;
+  background-color: #4c8ef7;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px #367ded;
+  padding:15px;
+  margin:5px;
+  margin-top:20px;
+}
+
+.button:hover {background-color: #356fed}
+
+.button:focus {
+  background-color: #356fed;
+  box-shadow: 0 5px #234da8;
+  transform: translateY(4px);
+}
+
+.instruction{
+  left:0%;
+  top:15%;
+  font-size: 2em;
+  padding-top: 2em;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-align: center;
+  margin-bottom: 3em;
+}
+
+.shapeContainer,.nameContainer{
+  align-content: center;
+  align-items: center;
+  box-align: center;
+  padding-left: 1em;
+  padding-top: 1.5em;
+  height:100%;
+  overflow: hidden;
+  position:fixed;
+}
+
+.sizeContainer{
+  align-content: center;
+  align-items: center;
+  box-align: center;
+  padding-left: 2em;
+  padding-top: 1.5em;
+  height:100%;
+  overflow: hidden;
+  position:fixed;
+}
+
+.launchStationContainer{
+  overflow: hidden;
+  position:fixed;
+  height:100%;
+}
+
+#asteroidName{
+  width: 80%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #356fed;
+  border-radius: 4px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  position: absolute;
+  left: 10%;
+}
+
+#shoot {
+  
+  margin-left:8%;
+  margin-top: 20%;
+}
+
+#stations {
+  position: absolute;
+  text-align: center;
+  align-content: center;
+}
+
+#stationNum{
+  font-family: 'Montserrat', sans-serif;
+  color:black;
+  font-size: 48px;
+  text-align: center;
+  width: 100%;
+  left:-10px;
+  position: absolute;
+}
+
+#insertName{
+  color: #FF6B6B;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+#launchMessage{
+  position: fixed;
+  top:5%;
+  left:5%;
+}
+
+
+#shoot:disabled {
+  background-color: grey;
+}
+
+/* loading animation */
+
+#loading{
+  height:100%;
+  overflow: hidden;
+  position:fixed;
+  background: #202020;
+  background-size: 100%;
+  width:100%;
+  left:0%;
+  top:0%;
+/*    opacity:0;*/
+  display: none;
+  z-index: 99;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  text-align: center;
+}
+
+#loadingGIF{
+  position:absolute;
+  left: 0%;
+  width:100%;
+}
+
+#loadingMessage{
+  color: white;
+  font-size: 1.5em;
+  position: relative;
+  left:0%;
+  top:10%;
+  padding: 10%;
+  z-index: 199;
+}
+
+
+#infoPage{
+  background: white;
+  display: none;
+  position:absolute;
+  left:0%;
+  top:0%;
+  padding: 10%;
+  width:100%;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#craterImage {
+  width:100%;
+}
+
+#learnMore {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px #367ded;
+  padding:15px;
+  margin:5px;
+  margin-top:20px;
+}
