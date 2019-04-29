@@ -54,7 +54,7 @@ function sendData(){
   console.log(data);
 }
 
- 
+
 
 //HTML chores
 
@@ -248,23 +248,33 @@ gesuredZone.addEventListener('touchend', function(event) {
 }, false);
 
 function handleGesure() {
-    var swiped = 'swiped: ';
-    if (touchendY < touchstartY) {
-      //calculate speed = distance/time
-      var speed =  Math.floor( dist/elapsedTime );
-      var vel = Math.floor(map(speed, 3, 200, 5, 50));
-      Velocity = vel.toString();
-      console.log(swiped + 'up!' + " speed: " + Velocity);
-      sendData();
-    }
-    if (touchendY > touchstartY) {
-      //wrong direction, don't register as shoot
-      console.log(swiped + 'down!');
-    }
-    if (touchendY == touchstartY) {
-      console.log('tap!');
-    }
-}
+  var swiped = 'swiped: ';
+     if (touchendY < touchstartY) {
+       //calculate speed = distance/time
+       var speed =  Math.floor( dist/elapsedTime );
+       var vel = Math.floor(map(speed, 3, 200, 5, 50));
+       Velocity = vel.toString();
+       console.log(swiped + 'up!' + " speed: " + Velocity);
+       $("#loading").css("display","inherit");
+       sendData();
+       var timeleft = 3;
+       var downloadTimer = setInterval(function(){
+        timeleft -= 1;
+       if(timeleft <= 0){
+           clearInterval(downloadTimer);
+           $("#loading").css("display","none");
+           $("#infoPage").css("display","inherit");
+         }
+         }, 1000);
+       }
+     if (touchendY > touchstartY) {
+       //wrong direction, don't register as shoot
+       console.log(swiped + 'down!');
+     }
+     if (touchendY == touchstartY) {
+       console.log('tap!');
+     }
+ }
 
 
 
