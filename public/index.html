@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/socket.io/socket.io.js"></script>
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.dom.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
@@ -23,43 +24,48 @@
 
 
     <div class="shapeContainer" style= "height: 100%";"width: 100%">
-        <p class="instruction">Choose a Shape</p>
-        <button  class="button" class="shape" id="shape1" onfocus="shape1selected()" ontouchstart="shape1selected()"> </button>
-        <button  class="button" class="shape" id="shape2" onfocus="shape2selected()" ontouchstart="shape2selected()"> </button>
-        <button  class="button" class="shape" id="shape3" onfocus="shape3selected()" ontouchstart="shape3selected()"> </button>
-
+        <div class="box">
+            <p class="instruction">Choose a Shape</p>
+            <button  class="button" class="shape" id="shape1" onfocus="shape1selected()" ontouchstart="shape1selected()"> </button>
+            <button  class="button" class="shape" id="shape2" onfocus="shape2selected()" ontouchstart="shape2selected()"> </button>
+            <button  class="button" class="shape" id="shape3" onfocus="shape3selected()" ontouchstart="shape3selected()"> </button>
+        </div>
+        
         <button class="next" id="shapeNext" onclick="goToSize()">Next</button>
     </div>
 
     <div class="sizeContainer"style= "height: 100%";"width: 100%">
-        <p class="instruction">Choose a Size</p>
-        <button  class="button" class="size" id="size1" onfocus="size1selected()" ontouchstart="size1selected()"> small </button>
-        <button  class="button" class="size" id="size2" onfocus="size2selected()" ontouchstart="size2selected()"> medum </button>
-        <button  class="button" class="size" id="size3" onfocus="size3selected()" ontouchstart="size3selected()"> big </button>
+        <div class="box">
+            <p class="instruction">Choose a Size</p>
+            <button  class="button" class="size" id="size1" onfocus="size1selected()" ontouchstart="size1selected()"><span>small</span></button>
+            <button  class="button" class="size" id="size2" onfocus="size2selected()" ontouchstart="size2selected()"><span>medum</span></button>
+            <button  class="button" class="size" id="size3" onfocus="size3selected()" ontouchstart="size3selected()"><span>big</span></button>
+        </div>
 
         <button class="next" id="sizeNext" onclick="goToName()">Next</button>
     </div>
 
     <div class="nameContainer"style= "height: 100%";"width: 100%">
-        <p class="instruction">Almost there!</br>What’s your name, creater?</p>
-        <input id=asteroidName type="text">
+        <div class="box">
+            <p class="instruction">Almost there!</br>What’s your name, creater?</p>
+            <input id=asteroidName type="text">
+        </div>
 
         <button class="next" id="nameNext" onclick="goToStation()">Next</button>
     </div>
 
 
     <div class="launchStationContainer"style= "height: 100%";"width: 100%">
-        <p class="instruction" id="stationText">Choose your Launch Station</p>
-        <div id ="stations">
-
-          <button  class="button" id="bt1" onfocus="station1selected()" ontouchstart="station1selected()"> 1 </button>
-          <button  class="button" id="bt2" onfocus="station2selected()" ontouchstart="station2selected()"> 2 </button>
-          <button  class="button" id="bt3" onfocus="station3selected()" ontouchstart="station3selected()"> 3 </button>
-          <button  class="button" id="bt4" onfocus="station4selected()" ontouchstart="station4selected()"> 4 </button>
-          <button  class="button" id="bt5" onfocus="station5selected()" ontouchstart="station5selected()"> 5 </button>
-
+        
+        <div id ="stations" class="box">
+            <p class="instruction" id="stationText">Choose your Launch Station</p>
+          <button  class="button button1" id="bt1" onfocus="station1selected()" ontouchstart="station1selected()"> <span>1</span> </button>
+          <button  class="button button1" id="bt2" onfocus="station2selected()" ontouchstart="station2selected()"> <span>2</span> </button>
+          <button  class="button button1" id="bt3" onfocus="station3selected()" ontouchstart="station3selected()"> <span>3</span> </button>
+          <button  class="button button1" id="bt4" onfocus="station4selected()" ontouchstart="station4selected()"> <span>4</span> </button>
+          <button  class="button button1" id="bt5" onfocus="station5selected()" ontouchstart="station5selected()"> <span>5</span> </button>
           <button class="next" id="shoot" onclick="goToShoot()">Ready to shoot!</button>
-    </div>
+        </div>
 
 
     </div>

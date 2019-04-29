@@ -5,7 +5,7 @@ html{
   border:0px;
   padding:0px;
 }
-
+ 
 
 body{
   font-family: 'Montserrat', sans-serif;
@@ -31,6 +31,7 @@ body{
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;
+  position: absolute;
 }
 
 .shapeContainer{
@@ -78,11 +79,7 @@ body{
   background-size: 100%;
   background-repeat:   no-repeat;
   background-position: center center;
-  border-radius: 100px;
-  padding:10px;
-
-  height:80px;
-  width: 80px;
+  border-radius:50%;
 }
 
 #shape2{
@@ -90,11 +87,7 @@ body{
   background-size: 100%;
   background-repeat:   no-repeat;
   background-position: center center;
-  border-radius: 100px;
-  padding:10px;
-
-  height:80px;
-  width: 80px;
+  border-radius:50%;
 }
 
 #shape3{
@@ -102,11 +95,7 @@ body{
   background-size: 100%;
   background-repeat:   no-repeat;
   background-position: center center;
-  border-radius: 100px;
-  padding:10px;
-
-  height:80px;
-  width: 80px;
+  border-radius:50%;
 }
 
 /* rock size button shapes */
@@ -115,11 +104,9 @@ body{
   background-size: 100%;
   background-repeat:   no-repeat;
   background-position: center center;
-  border-radius: 100px;
+  border-radius:50%;
   color: #ffffff;
-  padding:10px;
-  height:80px;
-  width: 80px;
+  
 }
 
 #size2{
@@ -127,11 +114,9 @@ body{
   background-size: 100%;
   background-repeat:   no-repeat;
   background-position: center center;
-  border-radius: 100px;
+  border-radius: 50%;
   color: #ffffff;
-  padding:10px;
-  height:80px;
-  width: 80px;
+ 
 }
 
 #size3{
@@ -139,11 +124,9 @@ body{
   background-size: 100%;
   background-repeat:   no-repeat;
   background-position: center center;
-  border-radius: 100px;
+  border-radius:50%;
   color: #ffffff;
-  padding:10px;
-  height:80px;
-  width: 80px;
+  
 }
 
 
@@ -178,12 +161,7 @@ body{
   font-size: 20px;
   color: #ffffff;
   /* padding:10px; */
-  margin:20px;
-  height:60px;
-  width: 60px;
-  position: fixed;  /* or absolute */
-  top: 20%;
-  left: 40%;
+  
   } /*78,205,196*/
 #bt2  {
   background-color: #F7FFF7;
@@ -195,12 +173,7 @@ body{
   font-size: 20px;
   color: #bbbbbb;
   /* padding:10px; */
-  margin:20px;
-  height:60px;
-  width: 60px;
-  position: fixed; /* or absolute */
-  top: 30%;
-  left: 40%;
+  
   } /*247,255,247*/
 #bt3  {
   background-color: #FF6B6B;
@@ -212,12 +185,7 @@ body{
   font-size: 20px;
   color: #ffffff;
   /* padding:10px; */
-  margin:20px;
-  height:60px;
-  width: 60px;
-  position: fixed; /* or absolute */
-  top: 40%;
-  left: 40%;
+ 
   } /*255, 107, 107*/
 #bt4  {
   background-color: #FFE66D;
@@ -229,12 +197,7 @@ body{
   font-size: 20px;
   color: #ffffff;
   /* padding:10px; */
-  margin:20px;
-  height:60px;
-  width: 60px;
-  position: fixed;  /* or absolute */
-  top: 50%;
-  left: 40%;
+  
   } /*255,230,109*/
 #bt5  {
   background-color: #5BC0EB;
@@ -246,12 +209,7 @@ body{
   font-size: 20px;
   color: #ffffff;
   /* padding:10px; */
-  margin:20px;
-  height:60px;
-  width: 60px;
-  position: fixed;  /* or absolute */
-  top: 60%;
-  left: 40%;
+  
   } /*198,61,92*/
 
 
@@ -284,24 +242,24 @@ body{
   /* margin-left: 35%;
   margin-top: 35%; */
   position: fixed; /* or absolute */
-  top: 75%;
-  left: 35%;
+  top: 81%;
+  left:50%;
+  transform:translateX(-50%);
 }
 
 
 #title{
-
   font-size: 20px;
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.45;
-  letter-spacing: -0.6px;
+  line-height: 1.8;
+  letter-spacing:0px;
 
   color: #fafafa;
 
   left:100%;
-  padding-top: 110%;
+  padding-top: 105%;
 
   align-content: center;
   align-items: center;
@@ -314,9 +272,8 @@ body{
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
   left:0%;
-  top:30%;
+  
   font-size: 20px;
-  padding-top: 25%;
   align-content: center;
   align-items: center;
   text-align: center;
@@ -337,20 +294,37 @@ body{
   background-color: transparent;
   font-family: 'Montserrat', sans-serif;
   display: inline-block;
-  padding: 25px 25px;
+  
   font-size: 18px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+  display: inline-block;
+  float: left;
   outline: none;
   /* color: #000; */
   /*background-color: #4c8ef7;*/
   border: none;
   /* border-radius: 20px; */
   /* box-shadow: 0 6px #367ded; */
-  padding:20px;
-  margin:20px;
-  margin-top:80px;
+  width:24%;
+  padding-bottom:24%;
+  margin-left:7%;
+  position: relative;
+}
+.button1{
+  width: 50%;
+  padding-bottom:10%;
+  display: block;
+  margin:20px auto 0;
+  float: none;
+}
+.button span{
+  display: inline-block;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 
 .button:hover {background-color: #ffffff}
@@ -366,13 +340,13 @@ body{
   color: #ffffff;
   left:0%;
   top:50%;
-  font-size: 17px;
-  padding-top: 60%;
+  font-size:20px;
+  line-height:1.6;
   align-content: center;
   align-items: center;
   text-align: center;
   box-align: center;
-  margin-bottom: 1em;
+  margin-bottom:2em;
 }
 
 .shapeContainer,.nameContainer{
@@ -406,8 +380,8 @@ body{
 }
 
 #asteroidName{
-  margin:15px;
-  margin-top:80px;
+  display: block;
+  margin:0 auto;
   align-self: center;
   width: 90%;
   padding: 12px 20px;
@@ -416,21 +390,30 @@ body{
   border-radius: 20px;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-
-  left: 10%;
+  outline: none;
 }
 
 #shoot {
-  position: fixed; /* or absolute */
-  top: 75%;
-  left: 20%;
+  position:static;
+  transform:none;
+  margin-top: 50px;
+  /*top: 75%;
+  left: 20%;*/
 /*
   margin-left:8%;
   margin-top: 20%; */
 }
-
-#stations {
+#shoot span{
   position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+#stations {
+
   text-align: center;
   align-content: center;
 }
@@ -454,7 +437,7 @@ body{
 #launchMessage{
   position: fixed;
   top:5%;
-  left:5%;
+  width:100%;
 }
 
 
@@ -534,3 +517,15 @@ body{
   margin:5px;
   margin-top:20px;
 }
+
+.box{
+  position: absolute;
+  width:100%;
+  top:48%;
+  transform: translateY(-50%);
+}
+
+
+
+
+
