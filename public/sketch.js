@@ -11,13 +11,14 @@ var inputG;
 var inputB;
 var stationNum;
 
-var shape = " ";
+var composition = " ";
 var size = " ";
 var AstroidName = document.getElementById('asteroidName');
 var storedName = " ";
 var stationColor = " ";
 var AstIndex;
 var Velocity; 
+var rockSize;
 
 function setup() {
   // createCanvas(400, 400);
@@ -43,8 +44,9 @@ function sendData(){
     g:inputG,
     b:inputB,
     n:stationNum,
-    a: AstIndex,
-    v: Velocity
+    a: composition,
+    v: Velocity,
+    s: rockSize
   }
 
 
@@ -62,22 +64,34 @@ function goToShape(){
   $(".shapeContainer").css("display", "inline-block");
 }
 
-function shape1selected(){
-   shape = "shape1";
-   
+var slider = document.getElementById("myRange");
+var output = document.getElementById("sizeValue");
+var iconSize = 30;
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+  rockSize = slider.value;
 }
 
-function shape2selected(){
-  shape = "shape2";
+function asteroidSelected(){
+   composition = "asteroid";
+   $("#myRange").attr("min", "1");
+   $("#myRange").attr("max", "30");
+   $("#compositionInfo").html("An asteroid is made of mineral and rock!");
 }
 
-function shape3selected(){
-  shape = "shape3";
+function cometSelected(){
+  composition = "comet";
+  $("#myRange").attr("min", "30");
+  $("#myRange").attr("max", "70");
+  $("#compositionInfo").html("An comet is made of ice and dust!")
 }
+
 
 function goToSize(){
-  if (shape == " "){
-    alert("Please choose a shape");
+  if (composition == " "){
+    alert("Please choose a comet or asteroid!");
     return false;
   } else{
     $(".shapeContainer").css("display", "none");
@@ -85,6 +99,7 @@ function goToSize(){
   }
   
 }
+
 
 function size1selected(){
   size = "size1";
@@ -278,7 +293,7 @@ function handleGesure() {
     if (touchendY < touchstartY) {
       //calculate speed = distance/time
       var speed =  Math.floor( dist/elapsedTime );
-      var vel = Math.floor(map(speed, 3, 200, 5, 50));
+      var vel = Math.floor(map(speed, 3, 200, 10, 40));   //mapping swipe speed to 3 different speed
       Velocity = vel.toString();
       console.log(swiped + 'up!' + " speed: " + Velocity);
       $("#loading").css("display","inherit");

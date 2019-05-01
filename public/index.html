@@ -22,20 +22,26 @@
     
     
     <div class="shapeContainer">
-        <p class="instruction">Choose a Shape</p>
-        <button  class="button" class="shape" id="shape1" onfocus="shape1selected()" ontouchstart="shape1selected()">Circular</button>
-        <button  class="button" class="shape" id="shape2" onfocus="shape2selected()" ontouchstart="shape2selected()">Irregular</button>
-        <button  class="button" class="shape" id="shape3" onfocus="shape3selected()" ontouchstart="shape3selected()">Long</button>
-      
+        <p class="instruction">Choose Composition</p>
+        <p id="compositionInfo">Comets are made of ice and metal.</p>
+        <button  class="button" class="shape" id="ast" onfocus="asteroidSelected()" ontouchstart="asteroidSelected()">Asteroid</button>
+        <button  class="button" class="shape" id="comet" onfocus="cometSelected()" ontouchstart="cometSelected()">Comet</button>
+        <!-- <button  class="button" class="shape" id="shape3" onfocus="shape3selected()" ontouchstart="shape3selected()">Long</button>
+       --> 
         <button class="next" id="shapeNext" onclick="goToSize()">Next</button>
     </div>
     
     <div class="sizeContainer">
         <p class="instruction">Choose a Size</p>
-        <button  class="button" class="size" id="size1" onfocus="size1selected()" ontouchstart="size1selected()">Small</button>
+        <p>Your <span id="cometOrAsteroid">comet</span> is <span id="sizeValue">0</span>KM in Diameter!</p>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="50" value="30" class="slider" id="myRange">
+          
+        </div>
+        <!-- <button  class="button" class="size" id="size1" onfocus="size1selected()" ontouchstart="size1selected()">Small</button>
         <button  class="button" class="size" id="size2" onfocus="size2selected()" ontouchstart="size2selected()">Medium</button>
         <button  class="button" class="size" id="size3" onfocus="size3selected()" ontouchstart="size3selected()">Large</button>
-        
+         --> 
         <button class="next" id="sizeNext" onclick="goToName()">Next</button>
     </div>
     
