@@ -35,7 +35,7 @@
         <p class="instruction">Choose a Size</p>
         <p>Your <span id="cometOrAsteroid">comet</span> is <span id="sizeValue">0</span>KM in Diameter!</p>
         <div class="slidecontainer">
-          <input type="range" min="1" max="50" value="30" class="slider" id="myRange">
+          <input type="range" min="1" max="50" value="1" class="slider" id="myRange">
           
         </div>
         <!-- <button  class="button" class="size" id="size1" onfocus="size1selected()" ontouchstart="size1selected()">Small</button>
@@ -54,23 +54,23 @@
     
 
     <div class="launchStationContainer">
-        <p class="instruction">Choose your Launch Station</p>
+        <p class="instruction">Choose a Trajectory for your <span id="cometOrAsteroid">comet</span>!</p>
         <div id ="stations">
     
-          <button  class="button" id="bt1" onfocus="station1selected()" ontouchstart="station1selected()">Station 1</button>
-          <button  class="button" id="bt2" onfocus="station2selected()" ontouchstart="station2selected()">Station 2</button>
-          <button  class="button" id="bt3" onfocus="station3selected()" ontouchstart="station3selected()">Station 3</button>
-          <button  class="button" id="bt4" onfocus="station4selected()" ontouchstart="station4selected()">Station 4</button>
-          <button  class="button" id="bt5" onfocus="station5selected()" ontouchstart="station5selected()">Station 5</button>
+          <button  class="button" id="bt1" onfocus="station1selected()" ontouchstart="station1selected()">1</button>
+          <button  class="button" id="bt2" onfocus="station2selected()" ontouchstart="station2selected()">2</button>
+          <button  class="button" id="bt3" onfocus="station3selected()" ontouchstart="station3selected()">3</button>
+          <button  class="button" id="bt4" onfocus="station4selected()" ontouchstart="station4selected()">4</button>
+          <button  class="button" id="bt5" onfocus="station5selected()" ontouchstart="station5selected()">5</button>
     
-          <button class="next" id="shoot" onclick="goToShoot()">Ready to shoot!</button>
+          <!-- <button class="next" id="shoot" onclick="goToShoot()">Ready to shoot!</button> -->
     </div>
 
     
     </div>
 
     <div class="launchPage" id="swipeZone">
-        <p id="launchMessage" class="instruction" >Swipe Up to send your asteroid <br><span id="insertName">n</span> <br> to the Moon!</p>
+        <p id="launchMessage" class="instruction" >Swipe Up to send your <span id="cometOrAsteroid">comet</span> <br><span id="insertName">n</span> <br> to the Moon!</p>
         <div id="triangle" >
           <p id="stationNum">2</p>
         </div>
@@ -78,20 +78,22 @@
     </div>
 
     <div id="loading">
-        <p id="loadingMessage">Your asteroid is flying to the moon...</p>
+        <p id="loadingMessage">Look at the big screen! <br>Your <span id="cometOrAsteroid">comet</span> is flying to the moon... </p>
         <img id="loadingGIF" src="images/loading2.gif">
     
     </div>
 
     <div id="infoPage">
-        <h1>Your asteroid created a Crater!</h1>
+        <h1>Your <span id="cometOrAsteroid">comet</span> created a Crater!</h1>
         <p>your crater is very similat to this crater on the actual Moon:</p>
         <p id="craterName">Aristoteles (87km)</p>
         <img id="craterImage" src="images/Aristoteles.jpg">
-        <p id="CraterInfo">The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.  
+        <p id="CraterInfo">The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls. 
+        
 </p>
-
-        <button id="learnMore">Learn More</button>
+        <button id="replay" onfocus="Replay()" ontouchstart="Replay()">Again!</button>
+        <button id="learnMore" onfocus="LearnMore()" ontouchstart="LearnMore()">Learn More</button>
+        
     </div>
    
     <script src="sketch.js"></script>
