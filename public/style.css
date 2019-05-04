@@ -1,13 +1,13 @@
 html{
-  
+
   height: 100%;
 }
 
 
 body{
-  font-family: 'Montserrat', sans-serif;
-  height: 100%; 
-  overflow: hidden;  
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
+  height: 100%;
+  overflow: hidden;
   /* don't change overfloaw:hidden*/
 }
 
@@ -28,7 +28,7 @@ body{
     vertical-align: bottom;
     align-content: center;
     align-items: center;
-    
+
     position: fixed;
     left: 50%;
     bottom:0%;
@@ -36,12 +36,105 @@ body{
     margin: 0 auto;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  border: none;
+  padding: 10px;
+}
 
-#bt1  {background-color: #4ECDC4;} /*78,205,196*/
-#bt2  {background-color: #F7FFF7; color:grey } /*247,255,247*/
-#bt3  {background-color: #FF6B6B;} /*255, 107, 107*/
-#bt4  {background-color: #FFE66D;} /*255,230,109*/
-#bt5  {background-color: #5BC0EB;} /*198,61,92*/
+.grid-item {
+  /* padding: 20px; */
+  font-size: 30px;
+  position: absolute;
+  text-align: center;
+  align-content: center;
+  border: none;
+}
+
+#bt1  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  /* border-radius: 100px; */
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 25%;
+  left: 4.533%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+
+#bt2  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  /* border-radius: 100px; */
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 44.704%;
+  left: 17.333%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+
+#bt3  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 65%;
+  left: 37.6%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#bt4  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 51.108%;
+  left: 59.467%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#bt5  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 33.128%;
+  left: 70.4%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
 
 
 .launchPage,.launchStationContainer,.nameContainer,.sizeContainer,.shapeContainer{
@@ -57,7 +150,7 @@ body{
 }
 
 .next{
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -94,34 +187,33 @@ body{
 }
 
 .button{
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 18px;
+  /* padding: 15px 25px; */
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #000;
-  background-color: #4c8ef7;
+  background-color:Transparent;
   border: none;
-  border-radius: 20px;
-  box-shadow: 0 6px #367ded;
-  padding:15px;
+  /* border-radius: 94px; */
+  /* box-shadow: 0 6px #367ded; */
+  /* padding:15px;
   margin:5px;
-  margin-top:20px;
+  margin-top:20px; */
 }
 
-.button:hover {background-color: #356fed}
+/* .button:hover {background-color: #356fed} */
 
-.button:focus {
+/* .button:focus {
   background-color: #356fed;
   box-shadow: 0 5px #234da8;
   transform: translateY(4px);
-}
+} */
 
 #replay {
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
   display: inline-block;
   padding: 15px 25px;
   font-size: 18px;
@@ -148,13 +240,14 @@ body{
 .instruction{
   left:0%;
   top:15%;
-  font-size: 2em;
-  padding-top: 2em;
+  font-size: 1.25em;
+  padding-top: 20%;
   align-content: center;
   align-items: center;
   text-align: center;
   box-align: center;
   margin-bottom: 3em;
+  color:#fafafa;
 }
 
 .shapeContainer,.nameContainer{
@@ -180,9 +273,15 @@ body{
 }
 
 .launchStationContainer{
+  background-image: url("images/station_bg.png");
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  position: absolute;
   overflow: hidden;
   position:fixed;
   height:100%;
+  width: 100%;
 }
 
 #asteroidName{
@@ -191,14 +290,14 @@ body{
   box-sizing: border-box;
   border: 2px solid #356fed;
   border-radius: 4px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
   font-size: 20px;
   position: absolute;
   left: 10%;
 }
 
 #shoot {
-  
+
   margin-left:8%;
   margin-top: 20%;
 }
@@ -210,7 +309,7 @@ body{
 }
 
 #stationNum{
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
   color:black;
   font-size: 48px;
   text-align: center;
@@ -294,7 +393,7 @@ body{
 }
 
 #learnMore {
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
   display: inline-block;
   padding: 15px 25px;
   font-size: 18px;
