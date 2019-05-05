@@ -1,14 +1,20 @@
 html{
-
+  overflow: hidden;
   height: 100%;
+  margin:0px;
+  border:0px;
+  padding:0px;
 }
 
 
 body{
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   height: 100%;
-  overflow: hidden;
-  /* don't change overfloaw:hidden*/
+  width:100%;
+  overflow: auto;
+  margin:0px;
+  border:0px;
+  padding:0px;
 }
 
 *,
@@ -40,13 +46,13 @@ body{
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   border: none;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .grid-item {
   /* padding: 20px; */
   font-size: 30px;
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
   align-content: center;
   border: none;
@@ -62,7 +68,7 @@ body{
   color: #fafafa;
   height: 94px;
   width: 94px;
-  top: 25%;
+  top: 24%;
   left: 4.533%;
   position: absolute;
   background-color:Transparent;
@@ -129,7 +135,7 @@ body{
   color: #fafafa;
   height: 94px;
   width: 94px;
-  top: 33.128%;
+  top: 31.128%;
   left: 70.4%;
   position: absolute;
   background-color:Transparent;
@@ -150,7 +156,7 @@ body{
 }
 
 .next{
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -277,7 +283,7 @@ body{
   background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center;
-  position: absolute;
+  /* position: absolute; */
   overflow: hidden;
   position:fixed;
   height:100%;
