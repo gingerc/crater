@@ -142,6 +142,55 @@ body{
   border: none;
   }
 
+#btreplay  {
+  background-image: url("images/button_restart.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 65px;
+  width: 65px;
+  top: 82%;
+  right: 23%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#btmore  {
+  background-image: url("images/button_more.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 65px;
+  width: 65px;
+  top: 82%;
+  left: 23%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#btreplay_last  {
+  background-image: url("images/button_restart.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 65px;
+  width: 65px;
+  top: 82%;
+  right: 40%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+
 
 .launchPage,.launchStationContainer,.nameContainer,.sizeContainer,.shapeContainer{
   display:none;
@@ -244,16 +293,75 @@ body{
 }
 
 .instruction{
-  left:0%;
-  top:15%;
-  font-size: 1.25em;
-  padding-top: 20%;
+  font-size: 1.5em;
+  padding-top: 17%;
   align-content: center;
   align-items: center;
   text-align: center;
   box-align: center;
-  margin-bottom: 3em;
+  /* margin-bottom: 3em; */
   color:#fafafa;
+}
+
+.second_instruction{
+  font-size: 1em;
+  /* padding-top: 20%; */
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-align: center;
+  color:#fafafa;
+}
+
+.third_info{
+  font-size: 1em;
+  margin-top: 10.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-align: center;
+  color:#fafafa;
+}
+
+.sticky {
+  position:sticky;
+  position: -webkit-sticky;
+  top:0;
+}
+
+.infoContainer{
+  background-image: url("images/bg.png");
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  position:fixed;
+  height:100%;
+  width: 100%;
+}
+
+.contentContainer{
+  background-color: #fafafa;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      overflow: hidden;
+      position: fixed;
+      height: 52%;
+      width: 90%;
+      border-radius: 10px;
+      margin: 5%;
+      padding-right: 7%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      padding-left: 7%;
+      font-size: 1em;
+      color: #2c416e;
+      text-align: -webkit-left;
+      text-align: left;
+      overflow: scroll;
 }
 
 .shapeContainer,.nameContainer{
@@ -380,22 +488,53 @@ body{
 
 #infoPage{
   /* don't change height:100% and overflow:auto */
-  overflow: auto;
+  background-image: url("images/bg.png");
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  position:fixed;
   height:100%;
-  background: white;
+  width: 100%;
+
+  overflow: auto;
   display: none;
-  position:absolute;
-  left:0%;
-  top:0%;
-  padding: 10%;
-  width:100%;
   align-content: center;
   align-items: center;
   text-align: center;
 }
 
+#craterBorder {
+  background-image: url("images/crater_border.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  /* border-radius: 100px; */
+  font-size: 20px;
+  color: #fafafa;
+  height: 130px;
+  width: 130px;
+  top: 37.7%;
+  left: 32.9%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+}
 #craterImage {
-  width:100%;
+  /* background-image: url("images/crater_border.png"); */
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  border-radius: 100px;
+  font-size: 20px;
+  color: #fafafa;
+      height: 98px;
+      width: 98px;
+      top: 40%;
+      left: 37%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
 }
 
 #learnMore {
