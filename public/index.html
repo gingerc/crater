@@ -6,7 +6,8 @@
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.dom.min.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
@@ -15,78 +16,94 @@
   <body>
 
     <div id="startScreen">
-        <h1 id=title >Create your own asteroid </br> and shoot it to the moon</h1>
+        <h1 class="instruction">Create your own impactor and shoot it to the moon</h1>
 
-
-        <button class="next" id="start" onclick="goToShape()">Start</button>
+        <button class="btn" id="start" onclick="goToShape()"></button>
     </div>
 
 
-    <div class="shapeContainer" style= "height: 100%";"width: 100%">
-        <p class="instruction">Choose a Shape</p>
-        <button  class="button" class="shape" id="shape1" onfocus="shape1selected()" ontouchstart="shape1selected()"> </button>
-        <button  class="button" class="shape" id="shape2" onfocus="shape2selected()" ontouchstart="shape2selected()"> </button>
-        <button  class="button" class="shape" id="shape3" onfocus="shape3selected()" ontouchstart="shape3selected()"> </button>
-
-        <button class="next" id="shapeNext" onclick="goToSize()">Next</button>
+    <div class="shapeContainer">
+        <div class="martop"></div>
+        <p class="instruction">Choose a Composition</p>
+        <p id="compositionInfo" class="sel-content"><br></p>
+        <button  class="button shapea" class="shape" id="ast" onfocus="asteroidSelected()" ontouchstart="asteroidSelected()"></button>
+        <button  class="button shapea" class="shape" id="comet" onfocus="cometSelected()" ontouchstart="cometSelected()"></button>
+        <!-- <button  class="button" class="shape" id="shape3" onfocus="shape3selected()" ontouchstart="shape3selected()">Long</button>
+       -->
+        <button class="btn nex" id="shapeNext" onclick="goToSize()"></button>
     </div>
 
-    <div class="sizeContainer"style= "height: 100%";"width: 100%">
-        <p class="instruction">Choose a Size</p>
-        <button  class="button" class="size" id="size1" onfocus="size1selected()" ontouchstart="size1selected()"> </button>
-        <button  class="button" class="size" id="size2" onfocus="size2selected()" ontouchstart="size2selected()"> </button>
-        <button  class="button" class="size" id="size3" onfocus="size3selected()" ontouchstart="size3selected()"> </button>
+    <div class="sizeContainer">
+        <div class="martop"></div>
+        <p class="instruction">Drag to choose a Size</p>
+        <p class="sel-content">Your <span id="cometOrAsteroid">comet</span> is <span id="sizeValue">0</span>KM in Diameter!</p>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="50" value="1" class="slider" id="myRange">
 
-        <button class="next" id="sizeNext" onclick="goToName()">Next</button>
+        </div>
+        <!-- <button  class="button" class="size" id="size1" onfocus="size1selected()" ontouchstart="size1selected()">Small</button>
+        <button  class="button" class="size" id="size2" onfocus="size2selected()" ontouchstart="size2selected()">Medium</button>
+        <button  class="button" class="size" id="size3" onfocus="size3selected()" ontouchstart="size3selected()">Large</button>
+         -->
+        <button class=" btn nex" id="sizeNext" onclick="goToName()"></button>
     </div>
 
-    <div class="nameContainer"style= "height: 100%";"width: 100%">
-        <p class="instruction">Almost there!</br>What’s your name, creater?</p>
+    <div class="nameContainer">
+        <div class="martop"></div>
+        <p class="instruction">Almost there!<br> What's your name creater?</p>
         <input id=asteroidName type="text">
 
-        <button class="next" id="nameNext" onclick="goToStation()">Next</button>
+        <button class="nex btn" id="nameNext" onclick="goToStation()"></button>
     </div>
 
 
-    <div class="launchStationContainer"style= "height: 100%";"width: 100%">
-        <p class="instruction" id="stationText">Choose your Launch Station</p>
-        <div id ="stations">
+    <div class="launchStationContainer">
+      <p class="instruction_ellie">Tap to choose your trajectory</p>
+      <div class="grid-container"
+      <div class ="stations">
 
-          <button  class="button" id="bt1" onfocus="station1selected()" ontouchstart="station1selected()"> 1 </button>
-          <button  class="button" id="bt2" onfocus="station2selected()" ontouchstart="station2selected()"> 2 </button>
-          <button  class="button" id="bt3" onfocus="station3selected()" ontouchstart="station3selected()"> 3 </button>
-          <button  class="button" id="bt4" onfocus="station4selected()" ontouchstart="station4selected()"> 4 </button>
-          <button  class="button" id="bt5" onfocus="station5selected()" ontouchstart="station5selected()"> 5 </button>
+        <button  class="grid-item" id="bt1" onfocus="station1selected()" ontouchstart="station1selected()">1</button>
+        <button  class="grid-item" id="bt2" onfocus="station2selected()" ontouchstart="station2selected()">2</button>
+        <button  class="grid-item" id="bt3" onfocus="station3selected()" ontouchstart="station3selected()">3</button>
+        <button  class="grid-item" id="bt4" onfocus="station4selected()" ontouchstart="station4selected()">4</button>
+        <button  class="grid-item" id="bt5" onfocus="station5selected()" ontouchstart="station5selected()">5</button>
 
-          <button class="next" id="shoot" onclick="goToShoot()">Ready to shoot!</button>
+          <!-- <button class="next" id="shoot" onclick="goToShoot()">Ready to shoot!</button> -->
     </div>
 
 
     </div>
 
     <div class="launchPage" id="swipeZone">
-        <p id="launchMessage" class="instruction" >Swipe Up to send your asteroid <br><span id="insertName">n</span> <br> to the Moon!</p>
+        <p id="launchMessage" class="instruction" >Your <span id="cometOrAsteroid">comet</span></br> <span id="insertName">n</span> </br>is ready!  <br> Swipe up to shoot</p>
         <div id="triangle" >
-          <p id="stationNum">2</p>
+          <div id="stationNum"></div>
         </div>
          <!-- <button id=btn onclick="OnBtnClicked()"></button> -->
+        <div class="swipeup"></div>
+        <div class="rock"></div>
+        <div class="pointer"></div>
     </div>
 
     <div id="loading">
-        <p id="loadingMessage">Your asteroid is flying to the moon...</p>
+        <p id="loadingMessage">Look at the big screen! <br>Your <span id="cometOrAsteroid">comet</span> is on its way!</p>
         <img id="loadingGIF" src="images/loading2.gif">
 
     </div>
 
     <div id="infoPage">
-        <h1>Your asteroid created a Crater!</h1>
-        <p>your crater is very similat to this crater on the actual Moon:</p>
-        <p id="craterName">Aristoteles (87km)</p>
+        <p class="instruction_ellie"> Your <span id="cometOrAsteroid">comet</span> created a crater!</p>
+        <p class="second_instruction">Your crater is very similar to this crater on the actual Moon:</p>
+        <p class="second_instruction" id="craterName">Aristoteles (87km)</p>
+        <div id="craterBorder"> </div>
         <img id="craterImage" src="images/Aristoteles.jpg">
-        <p id="CraterInfo">The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.
-</p>
+        <p class="third_info" id="CraterInfo">The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.
 
-        <button id="learnMore">Learn More</button>
+</p>
+        <button id="btmore" onfocus="LearnMore()" ontouchstart="LearnMore()"></button>
+        <button id="btreplay" onfocus="Replay()" ontouchstart="Replay()"></button>
+
+
     </div>
 
     <script src="sketch.js"></script>
