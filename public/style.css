@@ -27,6 +27,7 @@ body{
 
 #startScreen h1{
   overflow:hidden;
+  height: 100%;
   text-align: center;
   margin-top:110%;
   color:#fff;
