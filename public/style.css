@@ -298,6 +298,7 @@ body{
   background-image: url(images/button_yes.png);
 }
 #startScreen {
+  overflow: hidden;
   height: 100%;
   width: 100%;
   background-image: url("images/landing_page.png"); /* The image used */
