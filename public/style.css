@@ -16,6 +16,7 @@ body{
   margin:0px;
   border:0px;
   padding:0px;
+  background: #000;
 }
 
 *,
@@ -30,8 +31,6 @@ body{
 }
 
 #startScreen h1{
-  overflow:hidden;
-  height: 100%;
   text-align: center;
   margin-top:110%;
   color:#fff;
@@ -149,7 +148,7 @@ body{
 
 .launchPage,.launchStationContainer,.nameContainer,.sizeContainer,.shapeContainer{
   display:none;
-  position: relative;
+  /* position: relative; */
 }
 
 .launchPage {
@@ -159,9 +158,10 @@ body{
 
 #swipeZone {
   overflow: hidden;
+  position:fixed;
+  height:100%;
   left:0;
   top:0;
-  position: absolute;
   height:100%;
   width: 100%;
 }
@@ -312,7 +312,7 @@ body{
   background-size:     cover;                      /* <------ */
   background-repeat:   no-repeat;
   background-position: center center;
-  position: absolute;
+  position: fixed;
 }
 
 .shapeContainer,.nameContainer{
