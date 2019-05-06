@@ -26,6 +26,7 @@ body{
 
 
 #startScreen h1{
+  overflow:hidden;
   text-align: center;
   margin-top:110%;
   color:#fff;
@@ -144,6 +145,11 @@ body{
 .launchPage,.launchStationContainer,.nameContainer,.sizeContainer,.shapeContainer{
   display:none;
   position: relative;
+}
+
+.launchPage {
+  overflow:hidden;
+  height: 100%;
 }
 
 #swipeZone {
