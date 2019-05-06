@@ -15,14 +15,14 @@
   </head>
   <body>
 
-    <div id="startScreen">
+    <div id="startScreen" class="fade-in">
         <h1 class="instruction">Create your own impactor and shoot it to the moon</h1>
 
         <button class="btn" id="start" onclick="goToShape()"></button>
     </div>
 
 
-    <div class="shapeContainer">
+    <div class="shapeContainer fade-in">
         <div class="martop"></div>
         <p class="instruction">Choose a Composition</p>
         <p id="compositionInfo" class="sel-content"><br></p>
@@ -33,7 +33,7 @@
         <button class="btn nex" id="shapeNext" onclick="goToSize()"></button>
     </div>
 
-    <div class="sizeContainer">
+    <div class="sizeContainer fade-in">
         <div class="martop"></div>
         <p class="instruction">Drag to choose a Size</p>
         <p class="sel-content">Your <span id="cometOrAsteroid">comet</span> is <span id="sizeValue">0</span>KM in Diameter!</p>
@@ -48,7 +48,7 @@
         <button class=" btn nex" id="sizeNext" onclick="goToName()"></button>
     </div>
 
-    <div class="nameContainer">
+    <div class="nameContainer fade-in">
         <div class="martop"></div>
         <p class="instruction">Almost there!<br> What's your name creater?</p>
         <input id=asteroidName type="text">
@@ -57,7 +57,7 @@
     </div>
 
 
-    <div class="launchStationContainer">
+    <div class="launchStationContainer fade-in">
       <p class="instruction_ellie">Tap to choose your trajectory</p>
       <div class="grid-container"
       <div class ="stations">
@@ -74,7 +74,7 @@
 
     </div>
 
-    <div class="launchPage" id="swipeZone">
+    <div class="launchPage fade-in" id="swipeZone">
         <p id="launchMessage" class="instruction" >Your <span id="cometOrAsteroid">comet</span></br> <span id="insertName">n</span> </br>is ready!  <br> Swipe up to shoot</p>
         <div id="triangle" >
           <div id="stationNum"></div>
