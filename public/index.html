@@ -16,7 +16,7 @@
   <body>
 
     <div id="startScreen">
-        <h1>Create your own impactor and shoot it to the moon</h1>
+        <h1 class="instruction">Create your own impactor and shoot it to the moon</h1>
 
         <button class="btn" id="start" onclick="goToShape()"></button>
     </div>
@@ -24,8 +24,8 @@
 
     <div class="shapeContainer">
         <div class="martop"></div>
-        <p class="instruction">Choose Composition</p>
-        <p id="compositionInfo" class="sel-content">Comets are made of ice and metal.</p>
+        <p class="instruction">Choose a Composition</p>
+        <p id="compositionInfo" class="sel-content"><br></p>
         <button  class="button shapea" class="shape" id="ast" onfocus="asteroidSelected()" ontouchstart="asteroidSelected()"></button>
         <button  class="button shapea" class="shape" id="comet" onfocus="cometSelected()" ontouchstart="cometSelected()"></button>
         <!-- <button  class="button" class="shape" id="shape3" onfocus="shape3selected()" ontouchstart="shape3selected()">Long</button>
@@ -35,7 +35,7 @@
 
     <div class="sizeContainer">
         <div class="martop"></div>
-        <p class="instruction">Choose a Size</p>
+        <p class="instruction">Drag to choose a Size</p>
         <p class="sel-content">Your <span id="cometOrAsteroid">comet</span> is <span id="sizeValue">0</span>KM in Diameter!</p>
         <div class="slidecontainer">
           <input type="range" min="1" max="50" value="1" class="slider" id="myRange">
@@ -50,7 +50,7 @@
 
     <div class="nameContainer">
         <div class="martop"></div>
-        <p class="instruction">Name your Asteroid</p>
+        <p class="instruction">Almost there!<br> What's your name creater?</p>
         <input id=asteroidName type="text">
 
         <button class="nex btn" id="nameNext" onclick="goToStation()"></button>
@@ -58,7 +58,7 @@
 
 
     <div class="launchStationContainer">
-      <p class="instruction">Tap to choose your trajectory</p>
+      <p class="instruction_ellie">Tap to choose your trajectory</p>
       <div class="grid-container"
       <div class ="stations">
 
@@ -75,33 +75,34 @@
     </div>
 
     <div class="launchPage" id="swipeZone">
-        <p id="launchMessage" class="instruction" >Swipe Up to send your <span id="cometOrAsteroid">comet</span> <br><span id="insertName">n</span> <br> to the Moon!</p>
+        <p id="launchMessage" class="instruction" >Your <span id="cometOrAsteroid">comet</span> <span id="insertName">n</span> is ready!  <br> Swipe up to shoot</p>
         <div id="triangle" >
           <div id="stationNum"></div>
         </div>
          <!-- <button id=btn onclick="OnBtnClicked()"></button> -->
         <div class="swipeup"></div>
+        <div class="rock"></div>
         <div class="pointer"></div>
     </div>
 
     <div id="loading">
-        <p id="loadingMessage">Look at the big screen! <br>Your <span id="cometOrAsteroid">comet</span> is flying to the moon... </p>
+        <p id="loadingMessage">Look at the big screen! <br>Your <span id="cometOrAsteroid">comet</span> is on its way!</p>
         <img id="loadingGIF" src="images/loading2.gif">
 
     </div>
 
     <div id="infoPage">
-        <h1>Your <span id="cometOrAsteroid">comet</span> created a Crater!</h1>
-        <p>your crater is very similat to this crater on the actual Moon:</p>
-        <p id="craterName">Aristoteles (87km)</p>
+        <p class="instruction_ellie"> Your <span id="cometOrAsteroid">comet</span> created a crater!</p>
+        <p class="second_instruction">Your crater is very similar to this crater on the actual Moon:</p>
+        <p class="second_instruction" id="craterName">Aristoteles (87km)</p>
+        <div id="craterBorder"> </div>
         <img id="craterImage" src="images/Aristoteles.jpg">
-        <p id="CraterInfo">The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.
+        <p class="third_info" id="CraterInfo">The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.
 
 </p>
+        <button id="btmore" onfocus="LearnMore()" ontouchstart="LearnMore()"></button>
+        <button id="btreplay" onfocus="Replay()" ontouchstart="Replay()"></button>
 
-        <button id="learnMore" onfocus="LearnMore()" ontouchstart="LearnMore()"></button>
-
-        <button id="replay" onfocus="Replay()" ontouchstart="Replay()"></button>
 
     </div>
 

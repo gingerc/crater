@@ -8,7 +8,7 @@ html{
 
 
 body{
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   height: 100%;
   width:100%;
   overflow: hidden;
@@ -32,6 +32,7 @@ body{
   font-size:20px;
   padding: 0 30px;
 }
+
 .btn{
   border:0;
   background:url(images/button_create.png) no-repeat center /99%;
@@ -42,10 +43,8 @@ body{
   position:absolute;
   left:50%;
   transform: translateX(-50%);
-  bottom:10%;
+  TOP: 80%;
 }
-
-
 
 
 
@@ -56,11 +55,6 @@ body{
 }
 
 
-/* #bt1  {background-color: #4ECDC4;} /*78,205,196*/ */
-/* #bt2  {background-color: #F7FFF7; color:grey } /*247,255,247*/ */
-/* #bt3  {background-color: #FF6B6B;} /*255, 107, 107*/ */
-/* #bt4  {background-color: #FFE66D;} /*255,230,109*/ */
-/* #bt5  {background-color: #5BC0EB;} /*198,61,92*/  */
 
 
 #bt1  {
@@ -161,7 +155,7 @@ body{
 }
 
 .next{
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -199,7 +193,7 @@ body{
 
 .button{
   background-color: transparent;
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   display: inline-block;
 
   font-size: 18px;
@@ -245,13 +239,45 @@ body{
 
 .instruction{
   font-size: 1.5em;
-
   align-content: center;
   align-items: center;
   text-align: center;
-
   color:#fafafa;
 }
+
+.instruction_ellie{
+  font-size: 1.5em;
+  padding-top: 17%;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-align: center;
+  /* margin-bottom: 3em; */
+  color:#fafafa;
+}
+
+.second_instruction{
+  font-size: 1em;
+  /* padding-top: 20%; */
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-align: center;
+  color:#fafafa;
+}
+
+.third_info{
+  font-size: 1em;
+  margin-top: 10.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-align: center;
+  color:#fafafa;
+}
+
 .sel-content{
   text-align: center;
   color:#fff;
@@ -357,7 +383,7 @@ body{
   box-sizing: border-box;
   border: 0px solid #356fed;
   border-radius: 4px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 20px;
   margin:30px auto;
   display: block;
@@ -377,7 +403,7 @@ body{
 }
 
 #stationNum{
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color:black;
   font-size: 48px;
   text-align: center;
@@ -439,27 +465,41 @@ body{
 }
 
 
-#infoPage{
-  /* don't change height:100% and overflow:auto */
-  overflow: auto;
-  height:100%;
-  background: white;
-  display: none;
-  position:absolute;
-  left:0%;
-  top:0%;
-  padding: 10%;
-  width:100%;
-  align-content: center;
-  align-items: center;
-  text-align: center;
+#craterBorder {
+  background-image: url("images/crater_border.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  /* border-radius: 100px; */
+  font-size: 20px;
+  color: #fafafa;
+  height: 130px;
+  width: 130px;
+  top: 37.7%;
+  left: 32.9%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
 }
 
 #craterImage {
-  width:100%;
+  /* background-image: url("images/crater_border.png"); */
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  border-radius: 100px;
+  font-size: 20px;
+  color: #fafafa;
+      height: 98px;
+      width: 98px;
+      top: 40%;
+      left: 37%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
 }
 
-#learnMore {
+/* #learnMore {
 
   display: inline-block;
   border:0;
@@ -468,8 +508,9 @@ body{
   background: url(images/button_more.png) no-repeat center / 99%;
   margin:5px;
   margin-top:20px;
-}
-/* #learnMore {
+} */
+
+#learnMore {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
   display: inline-block;
   padding: 15px 25px;
@@ -486,7 +527,7 @@ body{
   padding:15px;
   margin:5px;
   margin-top:20px;
-} */
+}
 
 .slidecontainer {
   width: 80%;
@@ -523,7 +564,7 @@ body{
   width: 50px;
   height: 50px;
   border: 0;
-  background: url(images/comet.png);
+  background: url(images/slider_icon.png);
   background-size: 50px;
   cursor: pointer;
 }
@@ -603,20 +644,32 @@ body{
   width:50px;
   height:118px;
   position: absolute;
-  top:50%;
+  top:45%;
   left:50%;
   transform:translate(-50%,-50%);
-  background: url(images/swipeup.png) no-repeat center /70%;
+  background: url(images/swipeup.png) no-repeat center /50%;
 }
+
 .pointer{
   width:126px;
   height:110px;
   position: absolute;
-  top:50%;
+  top:45%;
   left:80%;
   transform:translate(-50%,-50%);
-  background: url(images/swipe_gesture.png) no-repeat center /50%;
+  background: url(images/swipe_gesture.png) no-repeat center /40%;
 }
+
+.rock{
+  width:126px;
+  height:110px;
+  position: absolute;
+  top:65%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background: url(images/rock_img.png) no-repeat center /100%;
+}
+
 #infoPage{
 
    color:#fff;
@@ -638,18 +691,6 @@ body{
    text-align: center;
 }
 
-
-.third_info{
-  font-size: 1em;
-  margin-top: 10.5em;
-  margin-left: 1em;
-  margin-right: 1em;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  box-align: center;
-  color:#fafafa;
-}
 
 .sticky {
   position:sticky;
@@ -689,6 +730,39 @@ body{
       text-align: left;
       overflow: scroll;
 }
+
+#btreplay  {
+  background-image: url("images/button_restart.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 65px;
+  width: 65px;
+  top: 80%;
+  right: 23%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#btmore  {
+  background-image: url("images/button_more.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 65px;
+  width: 65px;
+  top: 80%;
+  left: 23%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
 #btreplay_last  {
   background-image: url("images/button_restart.png");
   background-size: 100%;

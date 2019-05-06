@@ -78,14 +78,14 @@ function asteroidSelected(){
    composition = "asteroid";
    $("#myRange").attr("min", "1");
    $("#myRange").attr("max", "80");
-   $("#compositionInfo").html("An asteroid is made of mineral and rock!");
+   $("#compositionInfo").html("An asteroid is made of clay and rocks!");
 }
 
 function cometSelected(){
   composition = "comet";
   $("#myRange").attr("min", "1");
   $("#myRange").attr("max", "40");
-  $("#compositionInfo").html("An comet is made of ice and dust!")
+  $("#compositionInfo").html("A comet is made of ice and dust!")
 }
 
 
@@ -179,7 +179,7 @@ function station5selected(){
 function goToShoot(){
   if (stationColor == " "){
     $("#shoot").attr("disabled", true);
-    alert("Please Choose a station");
+    alert("Please Choose a trajectory");
     return false;
   } else {
     $("#shoot").attr("disabled", false);
@@ -190,8 +190,10 @@ function goToShoot(){
     var arr=['green.png','white.png','red.png','yellow.png','blue.png'];
     $("#stationNum").css('background-image','url(images/'+arr[stationNum-1]+')');
 
-
+    var color_arr = ['#4ECDC4','#F7FFF7','#FF6B6B','#FFE66D','#5BC0EB']
     $("#insertName").html("\"" + storedName +"\"");
+    $("#insertName").css('color',color_arr[stationNum-1]);
+
     // decideShapes();
   }
 }
@@ -203,55 +205,55 @@ function decideCrater(){
     CraterIndex = "1";
     $("#craterName").html("Shackleton (21 km)");
     $("#craterImage").attr('src', 'images/Shackleton.jpg');
-    $("#CraterInfo").html("The size of this crater is really similar to our moon’s crater Shackleton! Scientists call craters like Shackleton “a crater of eternal darkness” because the interior is perpetually kept in shadow.");
+    $("#CraterInfo").html("Scientists call craters like Shackleton “a crater of eternal darkness” because the interior is perpetually kept in shadow.");
    }
    if(composition == "comet" && rockSize <= 7 && rockSize > 3 ){
     CraterIndex = "2";  //circular medium
     $("#craterName").html("Aristarchus");
     $("#craterImage").attr('src', 'images/Aristarchus.jpg');
-    $("#CraterInfo").html("Your crater was about 40 km in diameter, which is really similar to our moon’s crater Aristarchus!");
+    $("#CraterInfo").html("Aristarchus is special for its high reflectance rays, making it one of the brightest formations on the moon’s surface. It can even be viewed with the naked eye in some circumstances!");
    }
    if(composition == "comet" && rockSize <= 11 && rockSize > 7  ){
     CraterIndex = "3";  //circular big
     $("#craterName").html("Descartes (48 km)");
     $("#craterImage").attr('src', 'images/Descartes.jpg');
-    $("#CraterInfo").html(" ");
+    $("#CraterInfo").html("Descartes is a crater with several curved ridges at its interior, whereas the outer rim is missing in certain areas. Descartes is notably famous for being about 50 km south of the Apollo 16 moon landing site!");
    }
    if(composition == "comet" && rockSize <= 15 && rockSize > 11 ){
     CraterIndex = "4";  //irregular small
     $("#craterName").html("Tycho (86 km)");
     $("#craterImage").attr('src', 'images/Tycho.png');
-    $("#CraterInfo").html("Your crater on the moon-like object is around 86 km in diameter, which is really similar to our moon’s crater Tycho! Tycho is a crater that’s around 108 million years old, making it one of the younger craters on the moon. The rays coming from Tycho can actually be seen from Earth!");
+    $("#CraterInfo").html("Tycho is a crater that’s around 108 million years old, making it one of the younger craters on the moon. The rays coming from Tycho can actually be seen from Earth!");
    }
    if(composition == "comet" && rockSize <= 19 && rockSize > 15 ){
     CraterIndex = "5";  //irregular medium
     $("#craterName").html("Aristoteles (87 km)");
     $("#craterImage").attr('src', 'images/Aristoteles.jpg');
-    $("#CraterInfo").html("The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.");
+    $("#CraterInfo").html("Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.");
    }
    if(composition == "comet" && rockSize <= 23 && rockSize > 19 ){
     CraterIndex = "6";  //irregular big
     $("#craterName").html("Piccolomini (88 km)");
     $("#craterImage").attr('src', 'images/Piccolomini.jpg');
-    $("#CraterInfo").html("Your crater was 88 km in diameter, which is really similar to our moon’s crater Piccolomini! Piccolomini was formed over 3 billion years ago, and at the center of the crater is a peak that rises about 2 km above the floor around it.");
+    $("#CraterInfo").html("Piccolomini was formed over 3 billion years ago, and at the center of the crater is a peak that rises about 2 km above the floor around it. ");
    }
    if(composition == "comet" && rockSize <= 28 && rockSize > 23 ){
     CraterIndex = "7";  //long small
     $("#craterName").html("Schiller (179 x 71 km)");
     $("#craterImage").attr('src', 'images/Schiller.jpg');
-    $("#CraterInfo").html("The size and shape of your crater is really similar to our moon’s crater Schiller! Schiller looks unique because it may actually be a fusion of two craters, resulting in an elongated shape that looks a lot like an oval.");
+    $("#CraterInfo").html("Schiller looks unique because it may actually be a fusion of two craters, resulting in an elongated shape that looks a lot like an oval.");
    }
    if(composition == "comet" && rockSize <= 34 && rockSize > 28 ){
     CraterIndex = "8";  //long medium
     $("#craterName").html("Orientale (294 km) ");
     $("#craterImage").attr('src', 'images/Orientale.jpg');
-    $("#CraterInfo").html(" ");
+    $("#CraterInfo").html("Orientale is a lunar mare, which are large dark plains on the moon’s surface caused by volcanic eruptions. The initial collision that formed orientale caused a ripple effect, resulting in three concentric circles that make Orientale look a bit like a target ring.");
    }
    if(composition == "comet" && rockSize <= 40 && rockSize > 34 ){
     CraterIndex = "9";  //long large
-    $("#craterName").html("Schrodinger (312 km)");
+    $("#craterName").html("Schrödinger (312 km)");
     $("#craterImage").attr('src', 'images/Schrodinger.jpg');
-    $("#CraterInfo").html("The size and shape of your asteroid is really similar to our moon’s crater Schiller! Schiller looks unique because it may actually be a fusion of two craters, resulting in an elongated shape that looks a lot like an oval.");
+    $("#CraterInfo").html("Schrödinger is considered to be an impact basin due to its large size and concentric rings.This crater is particularly unique because it actually shows evidence of recent volcanic activity!");
    }
   //Asteroids
    if(composition == "asteroid" && rockSize <= 7 ){
@@ -259,58 +261,59 @@ function decideCrater(){
     CraterIndex = "1";
     $("#craterName").html("Shackleton (21 km)");
     $("#craterImage").attr('src', 'images/Shackleton.jpg');
-    $("#CraterInfo").html("The size of this crater is really similar  to our moon’s crater Shackleton! Scientists call craters like Shackleton “a crater of eternal darkness” because the interior is perpetually kept in shadow.");
+    $("#CraterInfo").html("Scientists call craters like Shackleton “a crater of eternal darkness” because the interior is perpetually kept in shadow.");
    }
    if(composition == "asteroid" && rockSize <= 16 && rockSize > 7 ){
     CraterIndex = "2";  //circular medium
     $("#craterName").html("Aristarchus");
     $("#craterImage").attr('src', 'images/Aristarchus.jpg');
-    $("#CraterInfo").html("Your crater was about 40 km in diameter, which is really similar to our moon’s crater Aristarchus!");
+    $("#CraterInfo").html("Aristarchus is special for its high reflectance rays, making it one of the brightest formations on the moon’s surface. It can even be viewed with the naked eye in some circumstances!");
    }
    if(composition == "asteroid" && rockSize <= 25 && rockSize > 16  ){
     CraterIndex = "3";  //circular big
     $("#craterName").html("Descartes (48 km)");
     $("#craterImage").attr('src', 'images/Descartes.jpg');
-    $("#CraterInfo").html(" ");
+    $("#CraterInfo").html("Descartes is a crater with several curved ridges at its interior, whereas the outer rim is missing in certain areas. Descartes is notably famous for being about 50 km south of the Apollo 16 moon landing site!");
    }
    if(composition == "asteroid" && rockSize <= 34 && rockSize > 25 ){
     CraterIndex = "4";  //irregular small
     $("#craterName").html("Tycho (86 km)");
     $("#craterImage").attr('src', 'images/Tycho.png');
-    $("#CraterInfo").html("Your crater on the moon-like object is around 86 km in diameter, which is really similar to our moon’s crater Tycho! Tycho is a crater that’s around 108 million years old, making it one of the younger craters on the moon. The rays coming from Tycho can actually be seen from Earth!");
+    $("#CraterInfo").html("Tycho is a crater that’s around 108 million years old, making it one of the younger craters on the moon. The rays coming from Tycho can actually be seen from Earth!");
    }
    if(composition == "asteroid" && rockSize <= 43 && rockSize > 34 ){
     CraterIndex = "5";  //irregular medium
     $("#craterName").html("Aristoteles (87 km)");
     $("#craterImage").attr('src', 'images/Aristoteles.jpg');
-    $("#CraterInfo").html("The size and shape of your crater is really similar to our moon’s crater Aristoteles! Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.");
+    $("#CraterInfo").html("Aristoteles is unique for having an almost hexagonal shape because of its complex terraces at the inner walls.");
    }
    if(composition == "asteroid" && rockSize <= 52 && rockSize > 43 ){
     CraterIndex = "6";  //irregular big
     $("#craterName").html("Piccolomini (88 km)");
     $("#craterImage").attr('src', 'images/Piccolomini.jpg');
-    $("#CraterInfo").html("Your crater was 88 km in diameter, which is really similar to our moon’s crater Piccolomini! Piccolomini was formed over 3 billion years ago, and at the center of the crater is a peak that rises about 2 km above the floor around it.");
+    $("#CraterInfo").html("Piccolomini was formed over 3 billion years ago, and at the center of the crater is a peak that rises about 2 km above the floor around it. ");
    }
    if(composition == "asteroid" && rockSize <= 61 && rockSize > 52 ){
     CraterIndex = "7";  //long small
     $("#craterName").html("Schiller (179 x 71 km)");
     $("#craterImage").attr('src', 'images/Schiller.jpg');
-    $("#CraterInfo").html("The size and shape of your crater is really similar to our moon’s crater Schiller! Schiller looks unique because it may actually be a fusion of two craters, resulting in an elongated shape that looks a lot like an oval.");
+    $("#CraterInfo").html("Schiller looks unique because it may actually be a fusion of two craters, resulting in an elongated shape that looks a lot like an oval. ");
    }
    if(composition == "asteroid" && rockSize <= 70 && rockSize > 61 ){
     CraterIndex = "8";  //long medium
     $("#craterName").html("Orientale (294 km) ");
     $("#craterImage").attr('src', 'images/Orientale.jpg');
-    $("#CraterInfo").html(" ");
+    $("#CraterInfo").html("Orientale is a lunar mare, which are large dark plains on the moon’s surface caused by volcanic eruptions. The initial collision that formed orientale caused a ripple effect, resulting in three concentric circles that make Orientale look a bit like a target ring.");
    }
    if(composition == "asteroid" && rockSize <= 80 && rockSize > 70 ){
     CraterIndex = "9";  //long large
-    $("#craterName").html("Schrodinger (312 km)");
+    $("#craterName").html("Schrödinger (312 km)");
     $("#craterImage").attr('src', 'images/Schrodinger.jpg');
-    $("#CraterInfo").html("The size and shape of your asteroid is really similar to our moon’s crater Schiller! Schiller looks unique because it may actually be a fusion of two craters, resulting in an elongated shape that looks a lot like an oval.");
+    $("#CraterInfo").html("Schrödinger is considered to be an impact basin due to its large size and concentric rings.This crater is particularly unique because it actually shows evidence of recent volcanic activity! ");
    }
 
 }
+
 
 //replay
 function Replay(){
