@@ -24,6 +24,10 @@ body{
   box-sizing: border-box;
 }
 
+#startScreen {
+  overflow:hidden;
+  height: 100%;
+}
 
 #startScreen h1{
   overflow:hidden;
