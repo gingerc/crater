@@ -79,7 +79,11 @@ function asteroidSelected(){
    $("#myRange").attr("min", "1");
    $("#myRange").attr("max", "80");
    $("#compositionInfo").html("An asteroid is made of clay and rocks!");
-   $(".cometOrAsteroid").html("Asteroid");
+   $("#cometOrAsteroid").html("Asteroid");
+   $("#cometOrAsteroid2").html("Asteroid");
+   $("#cometOrAsteroid3").html("Asteroid");
+   $("#cometOrAsteroid4").html("Asteroid");
+   $("#cometOrAsteroid5").html("Asteroid");
 }
 
 function cometSelected(){
@@ -87,7 +91,11 @@ function cometSelected(){
   $("#myRange").attr("min", "1");
   $("#myRange").attr("max", "40");
   $("#compositionInfo").html("A comet is made of ice and dust!")
-  $(".cometOrAsteroid").html("Comet");
+  $("#cometOrAsteroid").html("Comet");
+  $("#cometOrAsteroid2").html("Comet");
+  $("#cometOrAsteroid3").html("Comet");
+  $("#cometOrAsteroid4").html("Comet");
+  $("#cometOrAsteroid5").html("Comet");
 }
 
 
