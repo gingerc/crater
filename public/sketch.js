@@ -79,15 +79,15 @@ function asteroidSelected(){
    $("#myRange").attr("min", "1");
    $("#myRange").attr("max", "80");
    $("#compositionInfo").html("An asteroid is made of clay and rocks!");
-   $("#cometOrAsteroid").html("Asteroid");
+   $(".cometOrAsteroid").html("Asteroid");
 }
 
 function cometSelected(){
   composition = "comet";
   $("#myRange").attr("min", "1");
   $("#myRange").attr("max", "40");
-  $("#compositionInfo").html("A comet is made of ice and dust!");
-  $("#cometOrAsteroid").html("Comet");
+  $("#compositionInfo").html("A comet is made of ice and dust!")
+  $(".cometOrAsteroid").html("Comet");
 }
 
 
