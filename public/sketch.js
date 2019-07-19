@@ -374,11 +374,6 @@ function handleGesure() {
          timeleft -= 1;
         if(timeleft <= 0){
             clearInterval(downloadTimer);
-            if (stationNum = "5" && (vel < 15 || vel > 28)){
-              $("#loading").css("display","none");
-              $("#launchMessage").html("Oops you missed! <br> Try Again!");
-              $(".launchPage").css("display", "inline-block");
-            }
             if (stationNum = "1" && (vel < 15 || vel > 28)){
               $("#loading").css("display","none");
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
@@ -388,7 +383,23 @@ function handleGesure() {
               $("#loading").css("display","none");
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
-            } else {
+            }
+            if (stationNum = "3" && (vel < 15 || vel > 28)){
+              $("#loading").css("display","none");
+              $("#launchMessage").html("Oops you missed! <br> Try Again!");
+              $(".launchPage").css("display", "inline-block");
+            }
+            if (stationNum = "4" && (vel < 15 || vel > 28)){
+              $("#loading").css("display","none");
+              $("#launchMessage").html("Oops you missed! <br> Try Again!");
+              $(".launchPage").css("display", "inline-block");
+            }
+            if (stationNum = "5" && (vel < 15 || vel > 28)){
+              $("#loading").css("display","none");
+              $("#launchMessage").html("Oops you missed! <br> Try Again!");
+              $(".launchPage").css("display", "inline-block");
+            }
+            else {
               $("#loading").css("display","none");
               $("#infoPage").css("display","inherit");
             }
