@@ -5,9 +5,21 @@ html{
 
 
 body{
+<<<<<<< HEAD
   font-family: 'Montserrat', sans-serif;
   height: 100%; 
   overflow: auto;
+=======
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  /* don't change overfloaw:hidden*/
+  margin:0px;
+  border:0px;
+  padding:0px;
+  background: #9b9b9b;
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
 }
 
 *,
@@ -16,6 +28,7 @@ body{
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 #triangle {
     width: 160px;
     height: 130px;
@@ -42,21 +55,151 @@ body{
 #bt4  {background-color: #FFE66D;} /*255,230,109*/
 #bt5  {background-color: #5BC0EB;} /*198,61,92*/
 
+=======
+#startScreen {
+  overflow:hidden;
+  height: 100%;
+}
+
+#startScreen h1{
+  text-align: center;
+  margin-top:110%;
+  color:#fff;
+  font-size:20px;
+  padding: 0 30px;
+}
+
+.btn{
+  border:0;
+  background:url(images/button_create.png) no-repeat center /99%;
+  width:60px;
+  height:60px;
+  display: block;
+  margin:20px auto;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  TOP: 80%;
+}
+
+
+
+
+
+#triangle {
+    margin: 0 auto;
+}
+
+
+
+
+#bt1  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  /* border-radius: 100px; */
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 24%;
+  left: 4.533%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+
+#bt2  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  /* border-radius: 100px; */
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 44.704%;
+  left: 17.333%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+
+#bt3  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 65%;
+  left: 37.6%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#bt4  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 51.108%;
+  left: 59.467%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#bt5  {
+  background-image: url("images/station.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 94px;
+  width: 94px;
+  top: 31.128%;
+  left: 70.4%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
 
 .launchPage,.launchStationContainer,.nameContainer,.sizeContainer,.shapeContainer{
   display:none;
+  /* position: relative; */
+}
+
+.launchPage {
+  overflow:hidden;
+  height: 100%;
 }
 
 #swipeZone {
+  overflow: hidden;
+  position:fixed;
+  height:100%;
   left:0;
   top:0;
-  position: absolute;
   height:100%;
   width: 100%;
 }
 
 .next{
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -93,17 +236,27 @@ body{
 }
 
 .button{
+<<<<<<< HEAD
   font-family: 'Montserrat', sans-serif;
   display: inline-block;
   padding: 15px 25px;
+=======
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  display: inline-block;
+
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
   font-size: 18px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+  display: inline-block;
+  float: left;
   outline: none;
   color: #000;
   background-color: #4c8ef7;
   border: none;
+<<<<<<< HEAD
   border-radius: 20px;
   box-shadow: 0 6px #367ded;
   padding:15px;
@@ -112,55 +265,207 @@ body{
 }
 
 .button:hover {background-color: #356fed}
+=======
+  /* border-radius: 20px; */
+  /* box-shadow: 0 6px #367ded; */
+  width:32%;
+  padding-bottom:32%;
+  margin-left:12%;
+  position: relative;
+}
 
-.button:focus {
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
+
+#replay {
+  display: inline-block;
+  border:0;
+  width:60px;
+  height:60px;
+  background: url(images/button_restart.png) no-repeat center / 99%;
+  margin:5px;
+  margin-top:20px;
+  margin-left: 50px;
+}
+
+#replay:active{
   background-color: #356fed;
   box-shadow: 0 5px #234da8;
   transform: translateY(4px);
 }
 
+.martop{
+  height:30%;
+  width:100%;
+}
+
 .instruction{
+<<<<<<< HEAD
   left:0%;
   top:15%;
   font-size: 2em;
   padding-top: 2em;
+=======
+  overflow: hidden;
+  font-size: 1.5em;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  color:#fafafa;
+}
+
+.instruction_ellie{
+  font-size: 1.5em;
+  padding-top: 17%;
   align-content: center;
   align-items: center;
   text-align: center;
   box-align: center;
+  /* margin-bottom: 3em; */
+  color:#fafafa;
+}
+
+.second_instruction{
+  font-size: 1em;
+  /* padding-top: 20%; */
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-align: center;
+<<<<<<< HEAD
   margin-bottom: 3em;
+=======
+  color:#fafafa;
+}
+
+.third_info{
+  font-size: 1em;
+  margin-top: 10.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  box-align: center;
+  color:#fafafa;
+}
+
+.sel-content{
+  text-align: center;
+  color:#fff;
+  margin-bottom: 50px;
+}
+
+.nex{
+  /*margin-top: 40px;
+  position: relative;
+  bottom:-80px;*/
+  background-image: url(images/button_yes.png);
+}
+#startScreen {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-image: url("images/landing_page.png"); /* The image used */
+  background-color: #cccccc;
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
+  position: fixed;
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
 }
 
 .shapeContainer,.nameContainer{
+  height: 100%;
+  width: 100%;
+  background-image: url("images/bg_composition.png"); /* The image used */
+  background-color: #cccccc;
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
   align-content: center;
   align-items: center;
   box-align: center;
+<<<<<<< HEAD
   padding-left: 1em;
   padding-top: 1.5em;
   height:100%;
+=======
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
   overflow: hidden;
   position:fixed;
 }
 
 .sizeContainer{
+  height: 100%;
+  width: 100%;
+  background-image: url("images/bg_size.png"); /* The image used */
+  background-color: #cccccc;
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;
   align-content: center;
   align-items: center;
   box-align: center;
+<<<<<<< HEAD
   padding-left: 2em;
   padding-top: 1.5em;
   height:100%;
+=======
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
   overflow: hidden;
   position:fixed;
 }
 
 .launchStationContainer{
+  background-image: url("images/station_bg.png");
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  /* position: absolute; */
   overflow: hidden;
   position:fixed;
   height:100%;
+  width: 100%;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  border: none;
+  /* padding: 10px; */
+}
+
+.grid-item {
+  /* padding: 20px; */
+  font-size: 30px;
+  /* position: absolute; */
+  text-align: center;
+  align-content: center;
+  border: none;
+}
+
+/* rock size button shapes */
+#ast{
+  background-image: url("images/composition_asteroid_grey.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  border-radius:50%;
+}
+
+#comet{
+  background-image: url("images/composition_comet_grey.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  border-radius:50%;
+}
+
 
 #asteroidName{
   width: 80%;
+<<<<<<< HEAD
   padding: 12px 20px;
   box-sizing: border-box;
   border: 2px solid #356fed;
@@ -173,6 +478,21 @@ body{
 
 #shoot {
   
+=======
+  padding: 8px 20px;
+  box-sizing: border-box;
+  border: 0px solid #356fed;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 20px;
+  margin:30px auto;
+  display: block;
+  background: #d8dadc;
+}
+
+#shoot {
+
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
   margin-left:8%;
   margin-top: 20%;
 }
@@ -184,7 +504,7 @@ body{
 }
 
 #stationNum{
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color:black;
   font-size: 48px;
   text-align: center;
@@ -200,9 +520,7 @@ body{
 }
 
 #launchMessage{
-  position: fixed;
-  top:5%;
-  left:5%;
+  padding:20% 0 0;
 }
 
 
@@ -213,6 +531,7 @@ body{
 /* loading animation */
 
 #loading{
+  /*background:url(images/bg.png) no-repeat center /100%;*/
   height:100%;
   overflow: hidden;
   position:fixed;
@@ -247,25 +566,53 @@ body{
 }
 
 
-#infoPage{
-  background: white;
-  display: none;
-  position:absolute;
-  left:0%;
-  top:0%;
-  padding: 10%;
-  width:100%;
-  align-content: center;
-  align-items: center;
-  text-align: center;
+#craterBorder {
+  background-image: url("images/crater_border.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  /* border-radius: 100px; */
+  font-size: 20px;
+  color: #fafafa;
+  height: 130px;
+  width: 130px;
+  top: 37.7%;
+  left: 32.9%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
 }
 
 #craterImage {
-  width:100%;
+  /* background-image: url("images/crater_border.png"); */
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  border-radius: 100px;
+  font-size: 20px;
+  color: #fafafa;
+      height: 98px;
+      width: 98px;
+      top: 40%;
+      left: 37%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
 }
 
+/* #learnMore {
+
+  display: inline-block;
+  border:0;
+  width:60px;
+  height:60px;
+  background: url(images/button_more.png) no-repeat center / 99%;
+  margin:5px;
+  margin-top:20px;
+} */
+
 #learnMore {
-  font-family: 'Montserrat', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;;
   display: inline-block;
   padding: 15px 25px;
   font-size: 18px;
@@ -284,15 +631,33 @@ body{
 }
 
 .slidecontainer {
+<<<<<<< HEAD
   width: 100%;
+=======
+  width: 80%;
+  background: #d8d8d8;
+  border-radius: 5px;
+  margin:20px auto;
+  height: 10px;
+  position:relative;
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
 }
 
 .slider {
   -webkit-appearance: none;
   width: 100%;
   height: 10px;
+<<<<<<< HEAD
   border-radius: 5px;
   background: #d3d3d3;
+=======
+  position: absolute;
+  top: -1px;
+  left:-1px;
+  border:0;
+  border-radius: 5px;
+
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -309,7 +674,11 @@ body{
   width: 50px;
   height: 50px;
   border: 0;
+<<<<<<< HEAD
   background: url(images/comet.png);
+=======
+  background: url(images/slider_icon.png);
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
   background-size: 50px;
   cursor: pointer;
 }
@@ -321,4 +690,294 @@ body{
   background: url(images/comet.png);
   background-size: 50px;
   cursor: pointer;
+<<<<<<< HEAD
+=======
+}
+#stations{
+  position: relative;
+}
+
+.block{
+  width:60px;
+  height:60px;
+  display:block;
+  border:0;
+  color:#fff;
+  font-size:20px;
+  font-weight:bold;
+  position:absolute;
+  border-radius:50%;
+}
+
+.block:nth-child(1){
+  left:20px;
+  top:10px;
+}
+
+.block:nth-child(2){
+  left:80px;
+  top:100px;
+}
+
+.block:nth-child(3){
+  left:50%;
+  transform: translateX(-50%);
+  top:200px;
+}
+
+.block:nth-child(4){
+  right:80px;
+  top:100px;
+}
+
+.block:nth-child(5){
+  right:20px;
+  top:10px;
+}
+
+.launchPage{
+  background:url(images/bg.png) no-repeat center /100%;
+}
+
+
+#triangle{
+  width:100%;
+  position:absolute;
+  height:100%;
+  top:0;
+  left:0;
+}
+#stationNum{
+  background:url(images/red.png) no-repeat center / auto 100%;
+  height:200px;
+  width:100%;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+
+.swipeup{
+  width:50px;
+  height:118px;
+  position: absolute;
+  top:45%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background: url(images/swipeup.png) no-repeat center /50%;
+}
+
+.pointer{
+  width:126px;
+  height:110px;
+  position: absolute;
+  top:45%;
+  left:80%;
+  transform:translate(-50%,-50%);
+  background: url(images/swipe_gesture.png) no-repeat center /40%;
+}
+
+.rock{
+  width:126px;
+  height:110px;
+  position: absolute;
+  top:65%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background: url(images/rock_img.png) no-repeat center /100%;
+}
+
+#infoPage{
+
+   color:#fff;
+
+   /* don't change height:100% and overflow:auto */
+   background-image: url("images/bg.png");
+   background-size:     cover;
+   background-repeat:   no-repeat;
+   background-position: center center;
+   overflow: hidden;
+   position:fixed;
+   height:100%;
+   width: 100%;
+
+   overflow: auto;
+   display: none;
+   align-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+
+.sticky {
+  position:sticky;
+  position: -webkit-sticky;
+  top:0;
+}
+
+.infoContainer{
+  background-image: url("images/bg.png");
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  position:fixed;
+  height:100%;
+  width: 100%;
+}
+
+.contentContainer{
+  background-color: #fafafa;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      overflow: hidden;
+      position: fixed;
+      height: 52%;
+      width: 90%;
+      border-radius: 10px;
+      margin: 5%;
+      padding-right: 7%;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      padding-left: 7%;
+      font-size: 1em;
+      color: #2c416e;
+      text-align: -webkit-left;
+      text-align: left;
+      overflow: scroll;
+}
+
+#btreplay  {
+  background-image: url("images/button_restart.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 65px;
+  width: 65px;
+  top: 80%;
+  right: 23%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#btmore  {
+  background-image: url("images/button_more.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 65px;
+  width: 65px;
+  top: 80%;
+  left: 23%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+#btreplay_last  {
+  background-image: url("images/button_restart.png");
+  background-size: 100%;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  font-size: 20px;
+  color: #fafafa;
+  height: 65px;
+  width: 65px;
+  top: 82%;
+  right: 40%;
+  position: absolute;
+  background-color:Transparent;
+  border: none;
+  }
+
+
+
+.nameContainer{
+  background-image: url(images/bg_name.png);
+}
+
+
+
+.fade-in{
+  animation: animationFrames ease 1s;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+  -webkit-animation: animationFrames ease 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+  -moz-animation: animationFrames ease 1s;
+  -moz-animation-iteration-count: 1;
+  -moz-transform-origin: 50% 50%;
+  -moz-animation-fill-mode:forwards; /*FF 5+*/
+  -o-animation: animationFrames ease 1s;
+  -o-animation-iteration-count: 1;
+  -o-transform-origin: 50% 50%;
+  -o-animation-fill-mode:forwards; /*Not implemented yet*/
+  -ms-animation: animationFrames ease 1s;
+  -ms-animation-iteration-count: 1;
+  -ms-transform-origin: 50% 50%;
+  -ms-animation-fill-mode:forwards; /*IE 10+*/
+}
+
+@keyframes animationFrames{
+  0% {
+    opacity:0;
+    transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-moz-keyframes animationFrames{
+  0% {
+    opacity:0;
+    -moz-transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    -moz-transform:  translate(0px,0px)  ;
+  }
+}
+
+@-webkit-keyframes animationFrames {
+  0% {
+    opacity:0;
+    -webkit-transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    -webkit-transform:  translate(0px,0px)  ;
+  }
+}
+
+@-o-keyframes animationFrames {
+  0% {
+    opacity:0;
+    -o-transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    -o-transform:  translate(0px,0px)  ;
+  }
+}
+
+@-ms-keyframes animationFrames {
+  0% {
+    opacity:0;
+    -ms-transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    -ms-transform:  translate(0px,0px)  ;
+  }
+>>>>>>> 31dc67378cc3a783fee4f2278b6a81a4994dc4bf
 }
