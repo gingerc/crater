@@ -389,7 +389,7 @@ function handleGesure() {
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
             }
-            else if (stationNum === "4" && (vel < 14 || vel > 26)){
+            else if (stationNum === "4" && (vel < 14 || vel > 27)){
               $("#loading").css("display","none");
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
