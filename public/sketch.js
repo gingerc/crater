@@ -71,8 +71,7 @@ output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-  if(slider.value!= " ") {rockSize = slider.value}
-  else {rockSize = "1"}
+  rockSize = slider.value;
 }
 
 function asteroidSelected(){
@@ -113,7 +112,7 @@ function goToSize(){
 
 
 function goToName(){
-  if (slider.value == " "){
+  if (slider.value == " " || slider.value == "1"){
     alert("Please choose the size of your impactor!");
     return false;
   } else{
