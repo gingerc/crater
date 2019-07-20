@@ -374,7 +374,7 @@ function handleGesure() {
          timeleft -= 1;
         if(timeleft <= 0){
             clearInterval(downloadTimer);
-            if (stationNum === "1" && (vel < 18 || vel > 200)){
+            if (stationNum === "1" && (vel < 17 || vel > 200)){
               $("#loading").css("display","none");
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
