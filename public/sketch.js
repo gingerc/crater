@@ -72,7 +72,7 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
   if(slider.value!= undefined) {rockSize = slider.value}
-  else {rockSize = 1}
+  else {rockSize = '1'}
 }
 
 function asteroidSelected(){
