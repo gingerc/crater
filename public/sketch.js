@@ -379,22 +379,22 @@ function handleGesure() {
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
             }
-            if (stationNum === "2" && (vel < 15 || vel > 28)){
+            else if (stationNum === "2" && (vel < 15 || vel > 28)){
               $("#loading").css("display","none");
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
             }
-            if (stationNum === "3" && (vel < 15 || vel > 28)){
+            else if (stationNum === "3" && (vel < 15 || vel > 28)){
               $("#loading").css("display","none");
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
             }
-            if (stationNum === "4" && (vel < 15 || vel > 28)){
+            else if (stationNum === "4" && (vel < 15 || vel > 28)){
               $("#loading").css("display","none");
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
             }
-            if (stationNum === "5" && (vel < 15 || vel > 28)){
+            else if (stationNum === "5" && (vel < 15 || vel > 28)){
               $("#loading").css("display","none");
               $("#launchMessage").html("Oops you missed! <br> Try Again!");
               $(".launchPage").css("display", "inline-block");
