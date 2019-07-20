@@ -71,7 +71,7 @@ output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
-  rockSize = slider.value;
+  rockSize = slider.value || 1;
 }
 
 function asteroidSelected(){
